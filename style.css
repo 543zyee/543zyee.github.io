@@ -1,6 +1,6 @@
 body {
     font-family: "Microsoft JhengHei", sans-serif;
-    background-color: #fff0f5;
+    background-color: #f0feff;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -8,11 +8,28 @@ body {
 }
 
 header {
-    background-color: #ffb6c1;
+    background-color: #b6c7ff;
     padding: 1.5rem;
     text-align: center;
     color: white;
     font-size: 1.8rem;
+}
+
+nav {
+    background-color: #e1f1ff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #1491ff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 .container {
@@ -25,14 +42,14 @@ header {
 }
 
 h2 {
-    color: #ff69b4;
-    border-bottom: 2px solid #ffe4e1;
+    color: #69a0ff;
+    border-bottom: 2px solid #e1fdff;
     padding-bottom: 0.5rem;
     margin-top: 2rem;
 }
 
 .contact {
-    background-color: #fff5f8;
+    background-color: #f5f8ff;
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1.5rem;
@@ -55,8 +72,7 @@ h2 {
 
 .progress {
     height: 1.2rem;
-    background-color: #ff69b4;
-    width: 70%; /* 預設值，可視需求調整 */
+    background-color: #69a0ff;
 }
 
 .circle-skill {
@@ -69,11 +85,37 @@ h2 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: conic-gradient(#ff69b4 0% 80%, #eee 80%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     color: #333;
     margin-bottom: 0.5rem;
+    background: -webkit-conic-gradient(#69a0ff 0% 90%, #eee 90%);
+    background: conic-gradient(#69a0ff 0% 90%, #eee 90%);
+}
+
+.circle-skill:nth-child(2) .circle {
+    background: -webkit-conic-gradient(#69a0ff 0% 80%, #eee 80%);
+    background: conic-gradient(#69a0ff 0% 80%, #eee 80%);
+}
+
+.circle-skill:nth-child(3) .circle {
+    background: -webkit-conic-gradient(#69a0ff 0% 85%, #eee 85%);
+    background: conic-gradient(#69a0ff 0% 85%, #eee 85%);
+}
+
+.circle-skill:nth-child(4) .circle {
+    background: -webkit-conic-gradient(#69a0ff 0% 75%, #eee 75%);
+    background: conic-gradient(#69a0ff 0% 75%, #eee 75%);
+}
+
+.footer {
+    background-color: #b6d7ff;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-radius: 0 0 12px 12px;
 }
