@@ -1,0 +1,79 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffb6c1;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #ff69b4;
+    border-bottom: 2px solid #ffe4e1;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.contact {
+    background-color: #fff5f8;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.progress-container {
+    margin-bottom: 1.5rem;
+}
+
+.progress-label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 1.2rem;
+    background-color: #ff69b4;
+    width: 70%; /* 預設值，可視需求調整 */
+}
+
+.circle-skill {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#ff69b4 0% 80%, #eee 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
