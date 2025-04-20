@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Chang, Tzu-Yi</title>
     <style>
         body {
@@ -11,20 +12,44 @@
             background-color: #e6f0ff;
             color: #003366;
         }
+
         header, nav, section, article, aside, footer {
             padding: 20px;
             margin: 10px auto;
             max-width: 1000px;
         }
+
         header {
             background-color: #cce0ff;
             text-align: center;
             border-radius: 10px;
         }
-        header img {
-            width: 150px;
-            border-radius: 50%;
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
+
+        .header-container img {
+            width: 120px;
+            height: 240px;
+            border-radius: 5%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .header-container img:hover {
+            transform: scale(1.1);
+        }
+
+
+        .header-text {
+            text-align: left;
+        }
+
         nav {
             text-align: center;
             background-color: #b3d1ff;
@@ -44,18 +69,72 @@
         h2 {
             color: #336699;
         }
-        .skills div {
+
+        .skills-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skills-box {
+            flex: 1;
+            background-color: #e6f0ff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .code-skills div {
             background-color: #cce5ff;
             border-radius: 5px;
             margin: 5px 0;
         }
-        .skills span {
+
+        .code-skills span {
             display: inline-block;
             background-color: #3399ff;
             color: white;
             padding: 5px;
             width: 80%;
             border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .code-skills span:hover {
+            transform: scale(1.05);
+        }
+
+        .circle-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .circle-skill {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(#3399ff 75%, #cce5ff 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-weight: bold;
+            color: #003366;
+            transition: transform 0.3s ease;
+        }
+
+        .circle-skill:hover {
+            transform: scale(1.1);
+        }
+
+        .circle-skill::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: -20px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
         }
         .experience {
             display: flex;
@@ -84,83 +163,155 @@
             margin: 5px 10px;
             color: #003366;
         }
+
+        .contact img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            transition: transform 0.3s;
+        }
+
+        .contact a:hover img {
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 <body>
 
-<header>
-    <img src="your-photo.jpg" alt="個人照片">
-    <h1>Chang, Tzu-Yi</h1>
-    <p>チャンスが来たら 掴めよ....!!</p>
-</header>
+    <header>
+        <div class="header-container">
+            <img src="image/me.jpg" alt="個人照片">
+            <div class="header-text">
+                <h1>Chang, Tzu-Yi</h1>
+                <p>中原大學資訊管理學系</p>
+                <p>チャンスが来たら 掴めよ....!!</p>
+            </div>
+        </div>
+    </header>    
 
 <nav>
     <a href="#info">關於我</a>
-    <a href="#skills">技能</a>
-    <a href="#experience">經歷</a>
-    <a href="#contact">聯絡</a>
+    <a href="#skills">專業與技能</a>
+    <a href="#experience">個人經歷</a>
+    <a href="#contact">聯絡我</a>
 </nav>
 
 <section id="info">
-    <h2>個人基本資訊</h2>
-    <p>個性活潑外向，熱愛教學與創作，擁有良好溝通能力與團隊合作經驗。興趣包括唱歌、寫程式、追星、學習日文，並熱衷參與課程設計與資訊專題。</p>
+    <h2>關於我</h2>
+    <p>哈囉，我目前就讀中原大學資訊管理學系三年級，來自桃園！<br>
+        假日會擔任兒童程式講師，寒暑假也會參與營隊活動，教學中看到孩子眼睛發亮的瞬間，總讓我覺得很值得。<br>
+        在學期間參與了不少專案和活動，曾在國小、高中舉辦程式一日營，實際體驗從企劃到執行的完整流程。<br>
+        此外，也有進行資料庫設計與後端網頁開發專題，是將理論轉化為實作的寶貴經驗！<br>
+        興趣的部分～我很喜歡唱歌、彈吉他，正在自學日文中（希望有天能無字幕追完動畫😆）。<br>
+        這裡是我記錄學習與成長的空間，也歡迎一起交流分享，讓我們在熱愛的世界裡，發光發熱 ✨</p>
 </section>
 
 <section id="skills">
     <h2>專業與技能</h2>
-    <div class="skills">
-        <p>專業技能</p>
-        <div><span style="width: 85%">Python / Java / C#</span></div>
-        <div><span style="width: 70%">資料庫設計 / SQL</span></div>
-        <div><span style="width: 60%">網頁開發（HTML / CSS / JS / React）</span></div>
+    <div class="skills-container">
+        <!-- 程式技能 -->
+        <div class="skills-box code-skills">
+            <p><strong>程式技能</strong></p>
+            <div><span style="width: 85%">Python</span></div>
+            <div><span style="width: 85%">Java</span></div>
+            <div><span style="width: 60%">SQL</span></div>
+            <div><span style="width: 65%">HTML / CSS / JS</span></div>
+            <div><span style="width: 60%">JSP</span></div>
+        </div>
 
-        <p>其他技能</p>
-        <div><span style="width: 75%">Git / Figma / Canva</span></div>
-        <div><span style="width: 65%">教學設計與簡報</span></div>
+        <!-- 專業技能 -->
+        <div class="skills-box">
+            <p><strong>專業技能</strong></p>
+            <div class="circle-skills">
+                <div class="circle-skill" style="background: conic-gradient(#3399ff 65%, #cce5ff 0);" data-label="資料庫設計">65%</div>
+                <div class="circle-skill" style="background: conic-gradient(#3399ff 65%, #cce5ff 0);" data-label="網頁開發">65%</div>
+                <div class="circle-skill" style="background: conic-gradient(#3399ff 70%, #cce5ff 0);" data-label="系統分析">70%</div>
+                <div class="circle-skill" style="background: conic-gradient(#3399ff 30%, #cce5ff 0);" data-label="專案管理">30%</div>
+                <div class="circle-skill" style="background: conic-gradient(#3399ff 75%, #cce5ff 0);" data-label="教學設計">75%</div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="experience">
+
+<section id="learning-experience" class="my-5">
     <h2>個人經歷</h2>
+
+    <!-- 學習經歷 -->
+    <h3 class="text-center mb-4">學習經歷</h3>
     <div class="experience">
         <div class="exp-item">
-            <img src="project1.jpg" alt="活動1">
+            <img src="project4.jpg" alt="心甸心計畫">
             <div>
-                <h3>兒童程式營隊講師</h3>
-                <p>擔任Scratch程式設計講師，帶領國小學生完成互動式遊戲專案，透過分組活動與作品發表，提升學童邏輯思維與創作能力。</p>
+                <h4>企業概論｜心甸心計畫</h4>
+                <p>與「緬甸華文教育服務團-甸記」合作，透過公益餅乾設計與推廣，協助社群行銷並學習企業社會責任。</p>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <img src="project5.jpg" alt="程式一日營-建國國小">
+            <div>
+                <h4>管理學｜程式一日營@建國國小</h4>
+                <p>舉辦【星星學子】資訊教學活動，教授國小學生基礎程式，培養邏輯思維並激發學習興趣。</p>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <img src="project6.jpg" alt="資料庫管理">
+            <div>
+                <h4>資料庫管理｜網路書店資料庫規劃</h4>
+                <p>設計書店商品、訂單與會員系統的資料結構，使用 ER 圖與正規化分析，強化資料一致性與擴充性。</p>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <img src="project7.jpg" alt="花店網站後端">
+            <div>
+                <h4>網路程式設計｜花店網頁後端設計</h4>
+                <p>以 SJP 和 MySQL 開發訂購系統後端，實作商品管理、購物車與訂單功能，搭配前端呈現完整流程。</p>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <img src="project8.jpg" alt="南崁高中程式營">
+            <div>
+                <h4>資訊管理｜程式一日營@南崁高中</h4>
+                <p>規劃教學流程與教案設計，帶領高中生進行互動程式實作，提升資訊素養與問題解決能力。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 工作經歷 -->
+    <h3>工作經歷</h3>
+    <div class="experience">
+        <div class="exp-item">
+            <img src="project1.jpg" alt="程式講師">
+            <div>
+                <h4>兒童程式營隊講師</h4>
+                <p>擔任 Scratch 程式設計講師，帶領國小學生完成互動式遊戲專案，透過分組活動與作品發表，提升邏輯思維與創作能力。</p>
                 <a href="https://yourprojectlink.com">觀看成果頁面</a>
             </div>
         </div>
-
-        <div class="exp-item">
-            <img src="project2.jpg" alt="活動2">
-            <div>
-                <h3>資訊專題：AI音樂推薦系統</h3>
-                <p>與團隊合作開發音樂推薦系統，使用機器學習模型根據標籤生成音樂demo，協助廣告商選曲。負責後端開發與資料分析。</p>
-                <a href="https://yourprojectlink.com">觀看專題網站</a>
-            </div>
-        </div>
-
-        <div class="exp-item">
-            <img src="project3.jpg" alt="活動3">
-            <div>
-                <h3>與公益團體合作：網站設計</h3>
-                <p>與社福機構合作設計宣傳網站，內容包含活動資訊與募資連結。強調無障礙設計與響應式介面，提升用戶使用體驗。</p>
-                <a href="https://yourprojectlink.com">前往網站</a>
-            </div>
-        </div>
     </div>
 </section>
 
+
 <footer id="contact">
-    <h2>聯絡資訊</h2>
+    <h2>聯絡我</h2>
     <div class="contact">
-        <a href="https://www.facebook.com/yourfb">Facebook</a>
-        <a href="https://www.instagram.com/yourig">Instagram</a>
-        <a href="https://www.linkedin.com/in/yourlinkedin">LinkedIn</a>
-        <a href="mailto:youremail@example.com">Email Me</a>
+        <a href="mailto:543zyeee@gmail.com">
+            <img src="image/mail.png" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/543zyee/" target="_blank">
+            <img src="image/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/543zyee" target="_blank">
+            <img src="image/github.png" alt="GitHub">
+        </a>
     </div>
 </footer>
+
 
 </body>
 </html>
