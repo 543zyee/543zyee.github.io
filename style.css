@@ -99,7 +99,9 @@ h2 {
 .circle-skills {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    padding: 10px 0;
 }
 
 .circle-skill {
