@@ -146,7 +146,15 @@ h2 {
     max-width: 200px;
     border-radius: 10px;
     margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.experience img:hover {
+    transform: scale(1.05); /* 可自行調整放大程度 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 可選：加點陰影讓它浮起來 */
+    border-radius: 8px; /* 可選：讓圖片邊角柔和一點 */
+}
+
 footer {
     text-align: center;
     background-color: #cce0ff;
